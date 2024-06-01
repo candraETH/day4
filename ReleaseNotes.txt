@@ -1,0 +1,211 @@
+﻿
+FOLDER SIZE EXPLORER RELEASE NOTES
+----------------------------------
+
+04-MAR-2018 Version 2.0.0
+-------------------------
+
+New: Summary pane which can summarise files by extension, date created, modified or accessed.
+New: Summary pane which groups files into dates by month and year.
+New: Double click any summary pane item to start a filtered search on that item.
+New: Search filters for date modified, date created and date accessed.
+New: Search filters for comparison operators - greater than, less than and equal too.
+New: Improved performance when searching files.
+New: Improved performance when calculating folder sizes.
+New: Improved performance when sorting items by size.
+New: Upgraded FSE to use .Net Framework 4.6 instead of 4.0.
+New: Option to use generic icons when browsing folders to improve performance (enabled by default).
+New: Option to show 'Drive % free' instead of 'Drive % used' in the bottom status bar.
+New: Scroll to the current folder being calculated by double clicking the status bar progress label.
+New: Splash screen while Folder Size Explorer is loading drives.
+New: Automatic throttling of IO requests to the file system if the item processing rate drops too low.
+New: 'Refresh Subitems' item added to Folderview pane context menu (right click menu).
+New: 'Select All' and 'Select Inverse' items added to Fileview context menu.
+New: Custom message box created to replace the default Windows message box.
+New: Status column showing drive usage percentage for all drives at startup or when selecting the computer node.
+New: Sort progress status text when a large number of items listed in search results and column header clicked.
+New: Improved error logging window that lists errors much faster.
+New: Progress status text showing exactly what FSE is working on at all times.
+New: Text file logging. Moved to ProgramData\FolderSizeExplorer\FSE-log.txt
+New: File searches that are cancelled prematurely will still process items found up to that point.
+New: Main icon used for the desktop and the taskbar.
+Change: Windows XP & 2003 are no longer supported. Mapped network drives to these systems are still supported.
+Change: DigiCert 2 year SHA-256 Digital certificate used to sign FSE program files. (previously Symantec).
+Change: Bottom status bar shows elapsed time in minutes not secs if processing time is greater than 5 mins.
+Change: Status timer now starts from the moment folder is first selected rather than when size calculation starts.
+Change: 1.x Pro licences are valid for version 2.0. allowing free upgrade.
+Change: Colour used for 'disk space used' graphic in the bottom status bar.
+Change: Vertical spacing of items in the Folder view pane - 2 pixels per item.
+Change: Reduced the frequency of status updates from 250 to 333 milliseconds when calculating items.
+Change: Reduced the frequency of status updates when FSE is minimized to the taskbar.
+Change: Reduced the delay when browsing through folders while folder size calculation is in progress.
+Change: Normal Window state location,size and splitter distance is now remembered even if closed while maximised.
+Change: Timeout for a slow responding network folder is now 30 seconds.
+Change: All URLs pointing to folder-size-explorer.com now use https.
+Change: Toolbar icons cleaned up to improve appearance.
+Fix: Bug that could cause Folder Size Explorer to crash unexpectedly.
+Fix: Bug that caused the status bar disk usage graphic to disappear when FSE minimized or covered by window.
+Fix: Bug that caused the elapsed time in the status bar changed to 0 secs if FSE was minimized.
+Fix: Bug that caused the elapsed time in the status bar displayed 0 secs if processing was more than an hour.
+Fix: Bug that caused the folder/file count to sometimes display -1 at the start of the sizing process.
+Fix: Bug that caused the folder/file status to show negative if processing was cancelled before finishing.
+Fix: Bug that caused the selected items in the Foldview pane not to copy, delete or update correctly.
+Fix: Bug that caused the bottom status bar to redraw incorrectly if items being added while main window resized.
+Fix: Bug that caused the selected drive to change when it was right clicked and properties selected.
+Fix: Bug that caused the right click Fileview menu to prompt with an error if no items were listed.
+Fix: Bug that caused the incorrect path to be displayed in the title of the access error log window.
+Fix: Minor fixes, changes and optimisations.
+
+25-MAY-2017 Version 1.7.2
+-------------------------
+
+- Added "Open containing folder" to right click popup menu in search pane.
+- Added tooltip popup to drive bar graph that shows the drives usage stats when you hover the mouse over it.
+- Added additional status text when waiting for network folder to open.
+- Added "Feedback" to options menu on main toolbar.
+- Fixed a bug that could cause a long delay when the stop button was pressed during search.
+- Fixed a bug that caused columns to change order if "right click refresh" was selected during size calculation.
+- Fixed tooltip popups for the bottom status strip which were showing off screen when FSE was maximized.
+- Minor bug fixes, changes and optimisations.
+
+23-OCT-2016 Version 1.7.1
+-------------------------
+
+- Changed the search status summary information to make it more concise.
+- Changed link folders so that they are not included in folder size calculations.
+- Minor bug fixes, changes and optimisations.
+
+25-SEP-2016 Version 1.7.0
+-------------------------
+
+- Added the option to show file sizes grouped by file extensions in a new window pane.
+- Added the option to automatically run a search if any of the above file extensions are double clicked.
+- Added the option to add or remove icons and features from the main toolbar.
+- Added the option to show file sizes in Terabytes (TB)
+- Added the option to calculate SHA-512 checksums.
+- Changed the thread limit implementation and drop-down options to improve accuracy and control.
+- Changed the size of the disk space graphic in the bottom status bar to improve visibility.
+- Changed the look and position of a few items in the bottom status bar.
+- Changed FSE status updates during calculation from 200 to 250 milliseconds.
+- Changed FSE status updates to also occur during access denied errors.
+- Digitally signed FSE files with the latest SHA-256 code signing certificate from Symantec
+- See https://www.symantec.com/code-signing/ for code signing overview.
+- Fixed bug that changed column order when selecting "refresh all items" in context menu while calculating.
+- Fixed bug that could cause incorrect size calculations if file or folders deleted while calculating.
+- Minor bug fixes, changes and optimisations.
+
+19-JUNE-2016 Version 1.6.0
+--------------------------
+
+- Added automatic updating of the directory sizes when deleting files and folders.
+- The recycle bin still needs to be emptied via the toolbar icon to update the free space shown on the drive.
+- Added a recycle bin that now automatically detects whether to show a full or empty icon.
+- Added a timestamp to the directory status strip.
+- Fixed a bug that sometimes caused message windows to pop up with errors.
+- Fixed a bug which could cause a long timeout when a network drive was unreachable.
+- Fixed a bug which reduced the thread limit when 'path to long' IO exception occurred.
+- Changed the style of a few of the main window components.
+- Changed thread limit to auto reduce itself by 2 each time it detects network timeouts (reverts when calc completes).
+- Changed the position of the Recycle Bin icon in the tool bar to make it a little more accessible.
+- Changed licence check to always look for valid 'commercial use' licences in \ProgramData\FolderSizeExplorer\*
+- Minor bug fixes, changes and optimisations.
+
+08-MAY-2016 Version 1.5.0
+-------------------------
+
+- Added the option to show 14 additional columns of information for file and folders.
+- Added Columns: date created, date accessed, attributes, owner, company, file description & version.
+- Added Columns: shared, folder path, folder, path, sharing status, product name & version.
+- Added the ability to open FSE logs from the settings menu.
+- Fixed some bugs that occured when running FSE on non English systems.
+- Minor bug fixes, changes and optimisations.
+
+02-MAY-2016 Version 1.4.1
+-------------------------
+
+- Fixed bug in drive space bar graphic. Text was showing incorrect percentage value
+- Fixed bug in drive space bar graphic. Bar disappeared when minimizing or resizing FSE.
+- Minor bug fixes, changes and optimisations.
+
+22-APR-2016 Version 1.4.0
+-------------------------
+
+- Folder Size Explorer full non-beta version released.
+- Added the ability to search files and folders by size.
+- Added new graphic showing used and free disk space for the current drive.
+- Added the option to export file and folder listing to tab seperated values files.
+- Added the option to export file and folder listing to semi-colon separated values files.
+- Added the option to export file and folder listing to pipe separated values files.
+- Added the option to export file and folder listing to tilde separated values files.
+- Added help to the "Settings" button drop-down menu in the toolbar. Added help page to the website.
+- Added new toolbar background images.
+- Changed the progress bar so that it increases between folder calculations.
+- Changed the "Up" toolbar button so that it also moves the left pane selected folder.
+- Changed the licence agreement. Folder Size Explorer is now free for non-commercial and personal use only.
+- Checksums on some systems may not calculate - see https://support.microsoft.com/en-us/kb/811833
+- Improved stability and speed of folder size calculation.
+- Minor bug fixes, changes and optimisations.
+
+01-MAR-2016 Version 1.3.1
+-------------------------
+
+- Add the ability to start FSE in a specific directory by adding a path as a command line parameter.
+- Changed the way FSE handles directory changes when its busy to make it more stable.
+- Minor bug fixes, changes and optimisations.
+
+04-JAN-2016 Version 1.3.0
+-------------------------
+
+- Fixed bug in column sorting for non-english systems.
+- Fixed bug where non-english systems showed the wrong separator character for numbers. 
+- Fixed bug in export to csv for non-english system where number separator wasnt being removed.
+- Improved stability and speed of folder size calculation.
+- Minor bug fixes, changes and optimisations.
+
+07-SEP-2015 Version 1.2.0
+--------------------------
+
+- Added 'Empty Recycle Bin' button to the toolbar.
+- Improved stability and speed of folder size calculation.
+- Improved search for files and folders so that its more responsive.
+- Changed the bottom status bar to show the current drives used space instead of free space.
+- Changed icon of stop/cancel button so that it doesnt look like a delete icon.
+- Updated digital certificate used to sign FSE assemblies as it was due to expire.
+- Updated the licence agreement.
+- Minor bug fixes, changes and optimisations.
+
+03-DEC-2014 Version 1.1.2
+--------------------------
+
+- Fixed Beta expiry bug! 
+- Minor bug fixes, changes and optimisations.
+
+02-SEPT-2014 Version 1.1.1
+--------------------------
+
+- Fixed major bug with taskbar progress that prevented FSE from working on Windows 2008 Release 1
+- Fixed bug in taskbar progress where it would not always reset.
+- Minor bug fixes, changes and optimisations.
+
+01-JULY-2014 Version 1.1.0
+--------------------------
+
+- Added progress bar to Folder Size Explorer in Windows taskbar.
+- Added a prompt confirming restart when you press escape if adding items is taking to long
+- Improved stability and folder size calculation speed.
+- Changed the default toolbar background to the Windows default on Windows 2003 and XP machines
+- Re-signed the FSE exe files with latest certificate from Verisign/Symantec
+- Re-compiled Folder Size Explorer with latest version of Microsoft Visual Studio
+- Fixed bug causing GUI to stop responding sometimes when changing folders or trying to cancel current size calculation.
+- Fixed start-up issue where main GUI could take some time before appearing on systems with slow network drives.
+- Fixed bug where error would result if logs button was clicked twice
+- Fixed bug that might arise when sorting columns for non-English systems
+- Minor bug fixes, changes and optimisations.
+
+26-MAY-2014 Version 1.0.0
+-------------------------
+
+First Beta Release of Folder Size Explorer!
+
+
+
